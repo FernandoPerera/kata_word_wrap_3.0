@@ -13,7 +13,10 @@ public class Wrapper {
         } else if ( columNumber < 0 ) {
             throw new NegativeNumberExeption("Negatives numbers not allowed");
         }
-        return insertBreakLinesIntoTextString(List.of(textString.split("")));
+
+        return columNumber > textString.length()
+                ? textString
+                : insertBreakLinesIntoTextString(List.of(textString.split("")));
 
     }
     private static String insertBreakLinesIntoTextString(List<String> charList){
