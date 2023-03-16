@@ -4,7 +4,7 @@ public class Wrapper {
 
     public static String wrap(String textString, int columNumber){
 
-        if ( textString.isEmpty() ){
+        if ( textString == null || textString.isEmpty() ){
             return "0";
         }
 
