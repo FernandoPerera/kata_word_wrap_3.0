@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.wordwrap.WrapperTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-16T13:34:09" hostname="DESKTOP-AUO9ALU" time="0.028">
+<testsuite name="org.wordwrap.WrapperTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-16T13:46:58" hostname="DESKTOP-AUO9ALU" time="0.038">
   <properties/>
-  <testcase name="given_longest_text_string_than_column_number_return_text_string_with_corrects_breaks_lines()" classname="org.wordwrap.WrapperTest" time="0.028"/>
+  <testcase name="given_longest_text_string_than_column_number_return_text_string_with_corrects_breaks_lines()" classname="org.wordwrap.WrapperTest" time="0.038"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

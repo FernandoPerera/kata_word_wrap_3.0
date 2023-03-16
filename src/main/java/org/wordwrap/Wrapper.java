@@ -2,13 +2,9 @@ package org.wordwrap;
 
 import org.wordwrap.exeptions.NegativeNumberExeption;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Wrapper {
-    private static String response;
-
-    // Crear una List<Char>
 
     public static String wrap(String textString, int columNumber) throws NegativeNumberExeption {
 
@@ -17,21 +13,25 @@ public class Wrapper {
         } else if ( columNumber < 0 ) {
             throw new NegativeNumberExeption("Negatives numbers not allowed");
         }
-        List<String> charList = List.of(textString.split(""));
+        return insertBreakLinesIntoTextString(List.of(textString.split("")));
+
+    }
+    private static String insertBreakLinesIntoTextString(List<String> charList){
+
         String response = "";
 
         for (int index = 0; index < charList.size() ; index++) {
 
             if ( index % 10 == 0 && index > 0){
                 response += charList.get(index).equals(" ")
-                            ? "\n"
-                            : charList.get(index) + "\n";
+                        ? "\n"
+                        : charList.get(index) + "\n";
             } else {
                 response += charList.get(index);
             }
-
         }
-        return response.toString();
+
+        return response;
     }
 
 }
