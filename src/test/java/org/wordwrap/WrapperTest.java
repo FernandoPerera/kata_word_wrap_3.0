@@ -33,6 +33,10 @@ public class WrapperTest {
         assertEquals("0", Wrapper.wrap("", 0));
     }
 
+    @Test
+    void given_null_value_return_zero(){
 
+        assertEquals("0", Wrapper.wrap(null, 0));
+    }
 
 }
