@@ -1,6 +1,7 @@
 package org.wordwrap;
 
 import org.junit.jupiter.api.Test;
+import org.wordwrap.exeptions.NegativeNumberExeption;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -44,6 +45,16 @@ public class WrapperTest {
     void given_shorter_length_of_text_string_than_column_number_return_same_text_string(){
 
         assertEquals(STRING_TO_SEND, Wrapper.wrap(STRING_TO_SEND, 120));
+    }
+
+    @Test
+    void given_negative_number_return_throw(){
+
+        NegativeNumberExeption thrown = assertThrows( NegativeNumberExeption.class, () ->
+                Wrapper.wrap(STRING_TO_SEND, -10));
+
+        assertTrue(thrown.getMessage().contentEquals("Negatives numbers not allowed"));
+
     }
 
 }

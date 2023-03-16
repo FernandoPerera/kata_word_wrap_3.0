@@ -1,5 +1,7 @@
 package org.wordwrap;
 
+import org.wordwrap.exeptions.NegativeNumberExeption;
+
 public class Wrapper {
 
     // Crear una List<Char> en la que ir añadiendo cada
