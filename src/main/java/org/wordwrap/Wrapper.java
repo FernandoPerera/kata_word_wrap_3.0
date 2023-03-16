@@ -2,9 +2,12 @@ package org.wordwrap;
 
 import org.wordwrap.exeptions.NegativeNumberExeption;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Wrapper {
 
-    // Crear una List<Char> en la que ir añadiendo cada
+    // Crear una List<Char>
 
     public static String wrap(String textString, int columNumber) throws NegativeNumberExeption {
 

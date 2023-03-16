@@ -28,6 +28,7 @@ public class WrapperTest {
      */
 
     private static final String STRING_TO_SEND = "Nuevo test de la kata Wrapper 3.0 con gradle y helicoptero";
+    private static final String CORRECT_RESPONSE_WITH_10 = "Nuevo test\nde la kata\nWrapper 3.\n0 con grad\nle y helic\noptero";
 
     @Test
     void given_empty_string_return_zero() throws NegativeNumberExeption {
@@ -54,7 +55,12 @@ public class WrapperTest {
                 Wrapper.wrap(STRING_TO_SEND, -10));
 
         assertTrue(thrown.getMessage().contentEquals("Negatives numbers not allowed"));
+    }
 
+    @Test
+    void given_longest_text_string_than_column_number_return_text_string_with_corrects_breaks_lines() throws NegativeNumberExeption {
+
+        assertEquals(CORRECT_RESPONSE_WITH_10, Wrapper.wrap(STRING_TO_SEND, 10));
     }
 
 }
