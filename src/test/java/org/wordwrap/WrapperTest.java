@@ -14,9 +14,10 @@ public class WrapperTest {
      *       - Si llega una cadena con valor nulo devolver 0.
      *
      *       - Si la cadena tiene una menor longitud que el número
-     *         de columna.
+     *         de columna devolver la misma cadena.
      *
-     *       - Si el número de columna introducido es menor que 0.
+     *       - Si el número de columna introducido es menor que 0
+     *         devolver un throw.
      *
      *       - Si una palabra tiene una longitud mayor que el número de
      *         columna realizar un salto de línea.
@@ -37,6 +38,12 @@ public class WrapperTest {
     void given_null_value_return_zero(){
 
         assertEquals("0", Wrapper.wrap(null, 0));
+    }
+
+    @Test
+    void given_shorter_length_of_text_string_than_column_number_return_same_text_string(){
+
+        assertEquals(STRING_TO_SEND, Wrapper.wrap(STRING_TO_SEND, 120));
     }
 
 }
