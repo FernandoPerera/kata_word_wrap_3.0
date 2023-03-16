@@ -10,7 +10,7 @@ public class Wrapper {
             return "0";
         }
 
-        return "";
+        return textString;
 
     }
 
