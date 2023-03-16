@@ -30,19 +30,19 @@ public class WrapperTest {
     private static final String STRING_TO_SEND = "Nuevo test de la kata Wrapper 3.0 con gradle y helicoptero";
 
     @Test
-    void given_empty_string_return_zero(){
+    void given_empty_string_return_zero() throws NegativeNumberExeption {
 
         assertEquals("0", Wrapper.wrap("", 0));
     }
 
     @Test
-    void given_null_value_return_zero(){
+    void given_null_value_return_zero() throws NegativeNumberExeption {
 
         assertEquals("0", Wrapper.wrap(null, 0));
     }
 
     @Test
-    void given_shorter_length_of_text_string_than_column_number_return_same_text_string(){
+    void given_shorter_length_of_text_string_than_column_number_return_same_text_string() throws NegativeNumberExeption {
 
         assertEquals(STRING_TO_SEND, Wrapper.wrap(STRING_TO_SEND, 120));
     }
