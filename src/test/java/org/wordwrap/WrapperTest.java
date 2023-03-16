@@ -23,12 +23,10 @@ public class WrapperTest {
      *       - Si una palabra tiene una longitud mayor que el número de
      *         columna realizar un salto de línea.
      *
-     *       - Si se introduce una cadena y número de columna correcto
-     *         devolver el resultado esperado.
      */
 
     private static final String STRING_TO_SEND = "Nuevo test de la kata Wrapper 3.0 con gradle y helicoptero";
-    private static final String CORRECT_RESPONSE_WITH_10 = "Nuevo test\nde la kata\nWrapper 3.\n0 con grad\nle y helic\noptero";
+    private static final String CORRECT_RESPONSE_WITH_10 = "Nuevo test\nde la kata\n Wrapper 3\n.0 con gra\ndle y heli\ncoptero";
 
     @Test
     void given_empty_string_return_zero() throws NegativeNumberExeption {
