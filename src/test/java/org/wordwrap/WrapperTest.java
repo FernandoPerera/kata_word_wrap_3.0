@@ -27,4 +27,12 @@ public class WrapperTest {
 
     private static final String STRING_TO_SEND = "Nuevo test de la kata Wrapper 3.0 con gradle y helicoptero";
 
+    @Test
+    void given_empty_string_return_zero(){
+
+        assertEquals("0", Wrapper.wrap("", 0));
+    }
+
+
+
 }
