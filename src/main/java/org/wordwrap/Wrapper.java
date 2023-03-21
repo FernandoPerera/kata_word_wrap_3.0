@@ -8,24 +8,30 @@ public class Wrapper {
 
     public static String wrap(String textString, int columNumber) throws NegativeNumberExeption {
 
-        if ( textString == null || textString.isEmpty() ){
-            return "0";
-        } else if ( columNumber < 0 ) {
+        if ( columNumber < 0 ) {
             throw new NegativeNumberExeption("Negatives numbers not allowed");
+        }
+
+        boolean isEmptyOrNull = textString == null || textString.isEmpty();
+
+        if (isEmptyOrNull){
+            return "0";
         }
 
         return columNumber > textString.length()
                 ? textString
-                : insertBreakLinesIntoTextString(List.of(textString.split("")));
+                : insertBreakLinesIntoTextString(List.of(textString.split("")), columNumber);
 
     }
-    private static String insertBreakLinesIntoTextString(List<String> charList){
+    private static String insertBreakLinesIntoTextString(List<String> charList, int columnNumber){
 
         String response = "";
 
         for (int index = 0; index < charList.size() ; index++) {
 
-            if ( index % 10 == 0 && index > 0){
+            boolean shouldAddLineBreak = index % columnNumber == 0 && index > 0;
+
+            if (shouldAddLineBreak){
                 response += charList.get(index).equals(" ")
                         ? "\n"
                         : charList.get(index) + "\n";

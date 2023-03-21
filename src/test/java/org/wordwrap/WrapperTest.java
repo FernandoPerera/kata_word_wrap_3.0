@@ -22,7 +22,6 @@ public class WrapperTest {
      *
      *       - Si una palabra tiene una longitud mayor que el número de
      *         columna realizar un salto de línea.
-     *
      */
 
     private static final String STRING_TO_SEND = "Nuevo test de la kata Wrapper 3.0 con gradle y helicoptero";
